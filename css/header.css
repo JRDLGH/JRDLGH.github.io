@@ -26,13 +26,40 @@ header {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  background-color: #5a5a5a;
+  background-color: transparent;
   height: 45px;
   width: 100%;
   z-index: 50;
-  position: fixed;
+  position: absolute;
+  transition: all 0.7s;
   top: 0;
-  box-shadow: 0px 1px 2px black;
+}
+
+header.fixed {
+  background-color: #5a5a5a;
+  background-color: #5a5a5a;
+  position: fixed;
+}
+
+header.fixed nav #menu li a.main-nav-links {
+  color: white;
+  font-weight: normal;
+}
+
+header.fixed nav #menu li a.main-nav-links:hover {
+  background-color: #ff6060;
+  background-color: rgba(255, 96, 96, 0.7);
+  color: #f1f1f1;
+}
+
+header.fixed nav #menu li a.main-nav-links.active {
+  background-color: #e06d6d;
+  background-color: rgba(224, 109, 109, 0.7);
+  color: white;
+}
+
+header.fixed .menu-icon {
+  background-color: transparent;
 }
 
 @media screen and (min-width: 1024px) {
@@ -91,6 +118,7 @@ header nav #menu {
   z-index: 40;
   top: 45px;
   background-color: #5a5a5a;
+  background-color: rgba(90, 90, 90, 0.7);
 }
 
 @media screen and (min-width: 1024px) {
@@ -122,6 +150,8 @@ header nav #menu li {
 }
 
 header nav #menu li a.main-nav-links {
+  font-weight: 700;
+  font-size: 1.1rem;
   text-align: center;
   text-transform: uppercase;
   display: -webkit-box;
@@ -132,13 +162,14 @@ header nav #menu li a.main-nav-links {
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  color: #ffffff;
+  color: #fff2f2;
   background-color: transparent;
   transition: all 0.3s ease-in;
 }
 
 @media screen and (min-width: 1024px) {
   header nav #menu li a.main-nav-links {
+    color: #353535;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -147,16 +178,19 @@ header nav #menu li a.main-nav-links {
 }
 
 header nav #menu li a.main-nav-links:hover {
-  background-color: #985c5c;
-  color: #ffffff;
+  background-color: transparent;
+  color: #de4444;
 }
 
 header nav #menu li a.main-nav-links.active {
-  background-color: #974949;
+  background-color: transparent;
+  color: #de4444;
 }
 
 header .menu-icon {
   display: block;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
   position: relative;
   width: 45px;
   height: 45px;
@@ -217,8 +251,11 @@ header .menu-icon.is-opened {
 div#banner {
   background-image: url("../img/header-banner.jpg");
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   padding-top: 45px;
-  height: 250px;
+  height: 100vh;
   width: auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -232,17 +269,38 @@ div#banner {
 @media screen and (min-width: 1024px) {
   div#banner {
     padding-top: 60px;
-    height: 500px;
-    width: auto;
   }
 }
 
 div#banner h1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-transform: uppercase;
-  color: #e64e4e;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: normal;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
   padding-bottom: 0;
+}
+
+div#banner h1 .bigger {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  width: 100%;
+  font-size: 3.5rem;
+  letter-spacing: 2.2vw;
+  margin-right: -0.75vw;
+}
+
+@media screen and (min-width: 1024px) {
+  div#banner h1 .bigger {
+    font-size: 3.5rem;
+  }
 }
 
 div#banner-cv {
