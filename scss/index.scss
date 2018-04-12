@@ -14,7 +14,6 @@ body{
     z-index: 10;
     width: 100%;
     main{
-        padding-top: 1rem;
         h1{
             text-align: center;
             font-weight: normal;
@@ -22,17 +21,14 @@ body{
             font-size: 2rem;
             color: rgba($color: #000000, $alpha: 0.7)
         }
-        @media screen and (min-width:$large){
-            padding-top: 60px;
-        }
-        min-height: 90vh;
         background-color: rgb(240, 240, 240);
         section{
             @include flex();
             flex-direction: column;
             justify-content: flex-start;
             width: 100%;
-            height: 85vh;
+            height: 100vh;
+            padding: 1rem 0;
             .profile{
                 @include flex();
                 flex-direction: column;
