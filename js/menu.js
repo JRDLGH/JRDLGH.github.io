@@ -1,5 +1,7 @@
 $(function(){
-    console.log(getSectionsPositions());
+
+    var ob = getSectionsPositions();
+    
     var anchorAnimate = false;
     $('.menu-icon').click(function(){
         $(this).toggleClass('is-opened');
