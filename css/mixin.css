@@ -1,0 +1,23 @@
+/* This file contains all mixins for index page */
+/* 
+--- FLEX USAGE ---
+    div {
+        @include flex();
+    }
+--- END --- 
+*/
+/* 
+--- TRANSITION USAGE ---
+    div {
+        @include transition(all 1s ease);
+    }
+--- END --- 
+*/
+/* 
+--- TRANSFORM USAGE ---
+    div {
+        @include transform(scale(0));
+    }
+--- END --- 
+*/
+/*# sourceMappingURL=mixin.css.map */

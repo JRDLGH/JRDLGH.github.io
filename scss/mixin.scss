@@ -1,0 +1,49 @@
+/* This file contains all mixins for index page */
+
+@mixin flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+/* 
+--- FLEX USAGE ---
+    div {
+        @include flex();
+    }
+--- END --- 
+*/
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+/* 
+--- TRANSITION USAGE ---
+    div {
+        @include transition(all 1s ease);
+    }
+--- END --- 
+*/
+
+@mixin transform($args...) {
+    -webkit-transform: $args;
+    -moz-transform: $args;
+    -ms-transform: $args;
+    -o-transform: $args;
+    transform: $args;
+}
+
+/* 
+--- TRANSFORM USAGE ---
+    div {
+        @include transform(scale(0));
+    }
+--- END --- 
+*/

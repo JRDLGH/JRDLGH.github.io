@@ -1,0 +1,151 @@
+@import 'mixin';
+$large: 1024px;
+
+* {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    z-index: 10;
+    width: 100%;
+    main{
+        padding-top: 45px;
+        @media screen and (min-width:$large){
+            padding-top: 60px;
+        }
+        min-height: 90vh;
+        background-color: rgb(240, 240, 240);
+        section{
+            @include flex();
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 100%;
+            .profile{
+                @include flex();
+                flex-direction: column;
+                align-items: center;
+                padding-top: 1rem;
+                @media screen and (min-width:$large){
+                    padding-top: .5rem;
+                    flex-direction: row;
+                    align-items: none;
+                    justify-content: flex-start;
+                }
+                background-color: rgb(228, 228, 228);
+                width: 100%;
+                .pic{
+                    width: 100%;
+                    @media screen and (min-width:$large){
+                        width: 35%;
+                        /* ADDED */
+                        background-color: #cecece;
+                        border-top-right-radius: 80% 100%;
+                        border-bottom-right-radius: 80% 100%;
+                        /* END ADDED */
+                    }
+                    min-width: 250px;
+                    max-width: 400px;
+                    @include flex();
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        margin-left: 0px;
+                        @media screen and (min-width:$large){
+                            margin-left:4.5rem;
+                        }
+                        border-radius: 50%;
+                        // height: 90%;
+                        width: 85%;
+                    }
+                }
+                .info{
+                    padding: 2rem .5rem;
+                    width: 100%;
+                    @media screen and (min-width:$large){
+                        width: 65%;
+                    }
+                    flex-grow: 1;
+                    text-align: justify;
+                    h2{
+                        border-radius: 7px;
+                        text-align: center;
+                        @media screen and (min-width:$large){
+                            text-align: left;
+                        }
+                        color: #de4444;
+                        font-weight: 300;
+                        margin-bottom: 1rem;
+                        font-size: 2rem;
+                        text-transform: uppercase;
+                        background-color: #cecece;
+                        padding: 0.8rem 1rem;
+                    }
+                    p{
+                        font-size: 1.2rem;
+                        margin: 1.8rem 0;
+                        padding-left: 1rem;
+                    }
+                }
+            }
+            .parcours{
+                min-height: 60vh;
+                background-color: #974949;
+                color: white;
+                padding: 2rem;
+                .accordion{
+                    margin: 1rem 0;
+                    box-shadow: 0px 0px 5px #422020;
+                    border-radius: 0px 0px 5px 5px;
+                    &.is-opened{
+                        .title img{
+                            transform: scaleY(-1);
+                        }
+                    }
+                    .content{
+                        display: none;
+                    }
+                    .title{
+                        @include flex();
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 1rem;
+                        background-color: #efefef;
+                        h3{
+                            color:#974949;
+                            text-transform: uppercase;
+                        }
+                        img{
+                            height:20px;
+                            transform: scaleY(1);
+                            transition: transform 0.3s ease-in;
+                        }
+                    }
+                    p{
+                        padding: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+ul{
+    list-style: none;
+    list-style-type: none;
+    li{
+        display: inline-block;
+    }
+}
+a{
+    color:none;
+    text-decoration: none;
+    &:hover{
+        color: none;
+        text-decoration: none;
+    }
+}

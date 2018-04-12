@@ -1,0 +1,223 @@
+/* This file contains all mixins for index page */
+/* 
+--- FLEX USAGE ---
+    div {
+        @include flex();
+    }
+--- END --- 
+*/
+/* 
+--- TRANSITION USAGE ---
+    div {
+        @include transition(all 1s ease);
+    }
+--- END --- 
+*/
+/* 
+--- TRANSFORM USAGE ---
+    div {
+        @include transform(scale(0));
+    }
+--- END --- 
+*/
+* {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  z-index: 10;
+  width: 100%;
+}
+
+body main {
+  padding-top: 45px;
+  min-height: 90vh;
+  background-color: #f0f0f0;
+}
+
+@media screen and (min-width: 1024px) {
+  body main {
+    padding-top: 60px;
+  }
+}
+
+body main section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+body main section .profile {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  background-color: #e4e4e4;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  body main section .profile {
+    padding-top: .5rem;
+    flex-direction: row;
+    align-items: none;
+    justify-content: flex-start;
+  }
+}
+
+body main section .profile .pic {
+  width: 100%;
+  min-width: 250px;
+  max-width: 400px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  body main section .profile .pic {
+    width: 35%;
+    /* ADDED */
+    background-color: #cecece;
+    border-top-right-radius: 80% 100%;
+    border-bottom-right-radius: 80% 100%;
+    /* END ADDED */
+  }
+}
+
+body main section .profile .pic img {
+  margin-left: 0px;
+  border-radius: 50%;
+  width: 85%;
+}
+
+@media screen and (min-width: 1024px) {
+  body main section .profile .pic img {
+    margin-left: 4.5rem;
+  }
+}
+
+body main section .profile .info {
+  padding: 2rem .5rem;
+  width: 100%;
+  flex-grow: 1;
+  text-align: justify;
+}
+
+@media screen and (min-width: 1024px) {
+  body main section .profile .info {
+    width: 65%;
+  }
+}
+
+body main section .profile .info h2 {
+  border-radius: 7px;
+  text-align: center;
+  color: #de4444;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: #cecece;
+  padding: 0.8rem 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  body main section .profile .info h2 {
+    text-align: left;
+  }
+}
+
+body main section .profile .info p {
+  font-size: 1.2rem;
+  margin: 1.8rem 0;
+  padding-left: 1rem;
+}
+
+body main section .parcours {
+  min-height: 60vh;
+  background-color: #974949;
+  color: white;
+  padding: 2rem;
+}
+
+body main section .parcours .accordion {
+  margin: 1rem 0;
+  box-shadow: 0px 0px 5px #422020;
+  border-radius: 0px 0px 5px 5px;
+}
+
+body main section .parcours .accordion.is-opened .title img {
+  transform: scaleY(-1);
+}
+
+body main section .parcours .accordion .content {
+  display: none;
+}
+
+body main section .parcours .accordion .title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #efefef;
+}
+
+body main section .parcours .accordion .title h3 {
+  color: #974949;
+  text-transform: uppercase;
+}
+
+body main section .parcours .accordion .title img {
+  height: 20px;
+  transform: scaleY(1);
+  transition: transform 0.3s ease-in;
+}
+
+body main section .parcours .accordion p {
+  padding: .5rem;
+}
+
+ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+ul li {
+  display: inline-block;
+}
+
+a {
+  color: none;
+  text-decoration: none;
+}
+
+a:hover {
+  color: none;
+  text-decoration: none;
+}
+/*# sourceMappingURL=index.css.map */
