@@ -26,7 +26,6 @@ $(function(){
     });
     $('.anchor').click(function(evt){
         evt.preventDefault();
-        console.log()
         if(!$(evt.target.hash).is(':animated')){
             var position = $(this.hash).offset().top;
             if(isMobile()){
