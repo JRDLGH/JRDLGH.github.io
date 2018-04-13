@@ -1,7 +1,6 @@
 $(function(){
-
-    var ob = getSectionsPositions();
-    
+    initPage();
+    setCurrentSection($('html').scrollTop());
     var anchorAnimate = false;
     $('.menu-icon').click(function(){
         $(this).toggleClass('is-opened');
@@ -12,25 +11,8 @@ $(function(){
         }
     });
     $(window).scroll(function(evt){
-        if(!$('header').hasClass('fixed')){
-            $('header').addClass('fixed');
-        }
-        if(($('html').offset().top + 40) > $('html').scrollTop()){
-            $('header').removeClass('fixed');
-        }
-        if(true){
-            // switch(true){
-            //     case 1:;
-            //     break;
-            //     case 2:;
-            //     break;
-            //     case 3:;
-            //     break;
-            //     case 4:;
-            //     break;
-            //     default:;
-            // }
-        }
+        setFixedHeader();
+        setCurrentSection($('html').scrollTop());
     });
     $(window).resize(function(){
         if(window.innerWidth >= 1024){
@@ -94,4 +76,54 @@ function getSectionsPositions(){
         }
     });
     return positions;
+}
+
+function setCurrentSection(wPosition){
+    if(!wPosition){
+        wPosition = 0;
+    }
+    wPosition += getHeight($('header'));
+    var ob = getSectionsPositions();
+    var keys = Object.keys(ob);
+
+    keys.forEach(function(key,index)
+    {
+        if(key == keys[0]){
+            if(wPosition >= ob[key] && wPosition < ob[keys[index+1]]){
+                setSectionLinkActive(key);
+            }
+        }else if(ob[keys[index+1]]){
+            //if inside our current section then active the link
+            if(wPosition >= ob[key] && wPosition < ob[keys[index+1]]){
+                setSectionLinkActive(key);
+            }
+        }else if(key == keys[keys.length-1]){
+            if(wPosition >= ob[key] && wPosition > ob[keys[index-1]]){
+                console.log(key + ' is equal to ' + keys[keys.length-1] + '   ' + ob[keys[index-1]]);
+                setSectionLinkActive(key);
+            }
+        }
+    });
+}
+
+function setSectionLinkActive(section){
+    if(!$('.main-nav-links[href*="#'+ section +'"]').hasClass('active')){
+        toggleActive($('.main-nav-links[href*="#'+ section +'"]'));    
+    }
+}
+
+function initPage(){
+    if($('html').scrollTop() > 50){
+        setFixedHeader();
+    }
+}
+
+function setFixedHeader()
+{
+    if(!$('header').hasClass('fixed')){
+        $('header').addClass('fixed');
+    }
+    if(($('html').offset().top + 40) > $('html').scrollTop()){
+        $('header').removeClass('fixed');
+    }
 }
