@@ -29,6 +29,21 @@ body{
             width: 100%;
             height: 100vh;
             padding: 1rem 0;
+            a{
+                color:#ff6060;
+                &:hover{
+                    color:#e64e4e;
+                }
+            }
+            p{
+                padding: .5rem;
+            }
+            h1{
+                &.title{
+                    text-align: center;
+                    width: 100%;
+                }
+            }
             .profile{
                 @include flex();
                 flex-direction: column;
@@ -152,4 +167,7 @@ a{
         color: none;
         text-decoration: none;
     }
+}
+.container{
+    @include flex();
 }

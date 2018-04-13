@@ -1,0 +1,80 @@
+@import 'mixin';
+$large: 1024px;
+section#about{
+    width: 85%;
+    margin: auto;
+    @include flex();
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    @media screen and (min-width:$large){
+        align-items: flex-start;
+        height: 68vh;
+    }
+    img{
+        display: block;
+        margin: auto;
+        order:1;
+        max-height: 350px;
+        width: auto;
+        border-radius: 50%;
+        @media screen and (min-width:$large){
+            width: 35%;
+            z-index: 10;
+        }
+    }
+    article{
+        @media screen and (min-width:$large){
+            @include flex();
+            justify-content: center;
+            align-items: flex-start;
+            padding: 2rem 0rem;
+        }
+        div.content{
+            @media screen and (min-width:$large){
+                @include flex();
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            h2{
+                padding: 1rem;
+                text-align: center;
+                font-size: 1.8rem;
+                font-weight: normal;
+            }
+            p{
+                padding:.5rem 0; 
+                text-align: justify;
+                @media screen and (min-width:$large){
+                    padding:1rem;
+                }
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+section#activities{
+    padding: 0;
+    @include flex();
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    div#acti-banner{
+        @include flex();
+        align-items: center;    
+        background-image: url("../img/acti.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 28vh;    
+        @media screen and (min-width:$large){
+            height: 42vh;
+            background-position: bottom;        
+        }
+        h1{
+            color:#2e2020;
+            font-weight: normal;
+        }
+    }
+}

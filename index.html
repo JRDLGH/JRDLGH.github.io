@@ -1,70 +1,178 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <link rel="icon" href="favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Accueil | Portfolio</title>
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/footer.css">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i" rel="stylesheet"> 
-    </head>
-    <body>
-        <header>
-            <nav role="navigation">
-                <div id="brand">
-                    <h3>JORDAN LGH</h3>
-                </div>
-                <ul id="menu">
-                    <li>
-                        <a href="#intro" class="main-nav-links anchor active">Introduction</a>
-                    </li>
-                    <li>
-                        <a href="#about" class="main-nav-links anchor">à propos de moi</a>
-                    </li>
-                    <li>
-                        <a href="#activities" class="main-nav-links anchor">MES ACTIVITÉS</a>
-                    </li>
-                    <li>
-                        <a href="#" class="main-nav-links anchor">MON CV</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="menu-icon">
-                <span></span>
-                <!-- <svg x="0" y="0" width="54px" height="54px" viewBox="0 0 54 54">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accueil | Portfolio</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav role="navigation">
+            <div id="brand">
+                <h3>JORDAN LGH</h3>
+            </div>
+            <ul id="menu">
+                <li>
+                    <a href="#intro" class="main-nav-links anchor active">accueil</a>
+                </li>
+                <li>
+                    <a href="#about" class="main-nav-links anchor">à propos de moi</a>
+                </li>
+                <li>
+                    <a href="#activities" class="main-nav-links anchor">MES ACTIVITÉS</a>
+                </li>
+                <li>
+                    <a href="#cv" class="main-nav-links anchor">MON CV</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu-icon">
+            <span></span>
+            <!-- <svg x="0" y="0" width="54px" height="54px" viewBox="0 0 54 54">
                   <circle cx="27" cy="27" r="26"></circle>
                 </svg> -->
-              </div>
-        </header>
-        <section id="intro">
-            <div id="banner">
-                <h1>Bienvenue sur mon <br> <span class="bigger">portfolio</span></h1>
-                <hr>
-            </div>
-        </section>
-        <main>
-            <div class="full-container">
-                <section id="about">
-                    <h1>À propos de moi</h1>
-
+        </div>
+    </header>
+    <section id="intro">
+        <div id="banner">
+            <h1>Bienvenue sur mon
+                <br>
+                <span class="bigger">portfolio</span>
+            </h1>
+            <hr>
+        </div>
+    </section>
+    <main>
+        <div class="full-container">
+            <section id="about" class="container">
+                <h1 class="title">À propos de moi</h1>
+                <article>
+                    <img src="/img/pp.jpg" alt="Image de moi">
+                    <div class="content">
+                        <h2>Qui suis-je?</h2>
+                        <p>
+                            Je m’appelle Jordan Lagache et je suis un jeune étudiant belge de 22 ans. Je suis actuellement à ma 3ème année dans mes études
+                            à la haute école
+                            <a href="#">EPHEC de louvain-la-neuve</a> en technologie de l’Informatique.
+                        </p>
+                        <p>
+                            J'effectue pour l'instant mon premier stage en Entreprise chez Big Bad Wolf en tant que développeur web back-end.
+                        </p>
+                        <p>
+                            J’ai toujours eu beaucoup d’intérêt pour l’informatique, en particulier pour le web, mais aussi en graphisme et une passion
+                            pour la musique.
+                        </p>
+                    </div>
+                </article>
+            </section>
+            <section id="activities">
+                <div id="acti-banner">
+                    <h1 class="title">Activités</h1>
+                </div>
+                
+                    <!-- <img src="" alt="Image de moi"> -->
+            </section>
+            <!-- <section id="cv" class="container">
+                <h1>MON CV</h1>
+                <section class="profile">
+                    <div class="pic">
+                        <img src="img/bg.png" alt="picture">
+                    </div>
+                    <div class="info">
+                        <h2>SORN HULSEN</h2>
+                        <p>Étudiant en informatique</p>
+                        <p>
+                            Adresse:
+                        </p>
+                        <p>
+                            @:
+                        </p>
+                        <p>
+                            Né le:
+                        </p>
+                        <p>
+                            Nationalité:
+                        </p>
+                        <p>
+                            État civil:
+                        </p>
+                    </div>
                 </section>
-                <section id="activities">
-                    <h1>Activités</h1>
+                <section class="parcours">
+                    <article class="accordion">
+                        <div class="title">
+                            <h3>études</h3>
+                            <img src="img/arrow.svg" alt=">">
+                        </div>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sunt consequuntur atque eligendi
+                                reiciendis earum fuga corporis sint aliquid! Error eius nesciunt aut architecto adipisci
+                                laudantium libero perspiciatis sed aperiam!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sunt consequuntur atque eligendi
+                                reiciendis earum fuga corporis sint aliquid! Error eius nesciunt aut architecto adipisci
+                                laudantium libero perspiciatis sed aperiam!</p>
+                        </div>
+                    </article>
+                    <article class="accordion">
+                        <div class="title">
+                            <h3>connaissances linguistiques</h3>
+                            <img src="img/arrow.svg" alt=">">
+                        </div>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sunt consequuntur atque eligendi
+                                reiciendis earum fuga corporis sint aliquid! Error eius nesciunt aut architecto adipisci
+                                laudantium libero perspiciatis sed aperiam!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sunt consequuntur atque eligendi
+                                reiciendis earum fuga corporis sint aliquid! Error eius nesciunt aut architecto adipisci
+                                laudantium libero perspiciatis sed aperiam!</p>
+                        </div>
+                    </article>
+                    <article class="accordion">
+                        <div class="title">
+                            <h3>expérience professionnelle</h3>
+                            <img src="img/arrow.svg" alt=">">
+                        </div>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sunt consequuntur atque eligendi
+                                reiciendis earum fuga corporis sint aliquid! Error eius nesciunt aut architecto adipisci
+                                laudantium libero perspiciatis sed aperiam!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sunt consequuntur atque eligendi
+                                reiciendis earum fuga corporis sint aliquid! Error eius nesciunt aut architecto adipisci
+                                laudantium libero perspiciatis sed aperiam!</p>
+                        </div>
+                    </article>
+                    <article class="accordion">
+                        <div class="title">
+                            <h3>divers</h3>
+                            <img src="img/arrow.svg" alt=">">
+                        </div>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sunt consequuntur atque eligendi
+                                reiciendis earum fuga corporis sint aliquid! Error eius nesciunt aut architecto adipisci
+                                laudantium libero perspiciatis sed aperiam!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sunt consequuntur atque eligendi
+                                reiciendis earum fuga corporis sint aliquid! Error eius nesciunt aut architecto adipisci
+                                laudantium libero perspiciatis sed aperiam!</p>
+                        </div>
+                    </article>
                 </section>
-            </div>
-        </main>
-        <footer>
+            </section> -->
+        </div>
+    </main>
+    <footer>
 
-        </footer>
-        <script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-        <script src="js/index.js"></script>
-        <script src="js/header.js"></script>
-        <script src="js/footer.js"></script>
-        <script src="js/menu.js"></script>
-    </body>
+    <script src="js/menu.js"></script>
+</body>
+
 </html>

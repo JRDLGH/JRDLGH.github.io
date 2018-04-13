@@ -60,6 +60,23 @@ body main section {
   padding: 1rem 0;
 }
 
+body main section a {
+  color: #ff6060;
+}
+
+body main section a:hover {
+  color: #e64e4e;
+}
+
+body main section p {
+  padding: .5rem;
+}
+
+body main section h1.title {
+  text-align: center;
+  width: 100%;
+}
+
 body main section .profile {
   display: -webkit-box;
   display: -webkit-flex;
@@ -221,5 +238,13 @@ a {
 a:hover {
   color: none;
   text-decoration: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=index.css.map */
