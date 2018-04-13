@@ -99,7 +99,6 @@ function setCurrentSection(wPosition){
             }
         }else if(key == keys[keys.length-1]){
             if(wPosition >= ob[key] && wPosition > ob[keys[index-1]]){
-                console.log(key + ' is equal to ' + keys[keys.length-1] + '   ' + ob[keys[index-1]]);
                 setSectionLinkActive(key);
             }
         }
