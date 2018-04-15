@@ -21,7 +21,7 @@
 --- END --- 
 */
 section#about {
-  width: 85%;
+  width: 95%;
   margin: auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -35,6 +35,7 @@ section#about {
 @media screen and (min-width: 1024px) {
   section#about {
     align-items: flex-start;
+    width: 85%;
   }
 }
 
@@ -55,6 +56,12 @@ section#about img {
 
 section#about img.right-img {
   order: 1;
+}
+
+section#about img.left-img {
+  order: 0;
+  border-radius: 50%;
+  max-width: calc(50vh);
 }
 
 @media screen and (min-width: 1024px) {
@@ -103,6 +110,39 @@ section#about article div.content p {
   section#about article div.content p {
     padding: 1rem;
   }
+}
+
+section#about article div.content .skills {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+section#about article div.content .skills li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  section#about article div.content .skills li {
+    padding: 3rem 3.5rem;
+  }
+}
+
+section#about article div.content .skills li svg {
+  color: #d34545;
+  margin: .5rem;
 }
 
 section#activities {

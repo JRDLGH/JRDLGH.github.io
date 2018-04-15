@@ -1,7 +1,7 @@
 @import 'mixin';
 $large: 1024px;
 section#about{
-    width: 85%;
+    width: 95%;
     margin: auto;
     @include flex();
     align-items: center;
@@ -9,6 +9,7 @@ section#about{
     // min-height: 100vh;
     @media screen and (min-width:$large){
         align-items: flex-start;
+        width: 85%;
         // min-height: 68vh;
     }
     img{
@@ -26,7 +27,9 @@ section#about{
             order:1;
         }
         &.left-img{
-            
+            order:0;
+            border-radius: 50%;
+            max-width: calc(50vh);
         }
     }
     article{
@@ -56,6 +59,25 @@ section#about{
                     padding:1rem;
                 }
                 font-size: 1.1rem;
+            }
+            .skills{
+                @include flex();
+                justify-content: space-around;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                li{
+                    @include flex();
+                    align-items: center;
+                    padding: 1.2rem;
+                    @media screen and (min-width:$large){
+                        padding: 3rem 3.5rem;
+                    }
+                    svg{
+                        color: #d34545;
+                        margin: .5rem;
+                    }
+                }
             }
         }
     }
