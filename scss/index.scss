@@ -38,11 +38,32 @@ body{
             p{
                 padding: .5rem;
             }
-            h1{
-                &.title{
-                    text-align: center;
-                    width: 100%;
+            div.title{
+                border-left: .2rem solid #e64e4e;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-right: .2rem solid #e64e4e;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                @media screen and (min-width:$large){
+                    border-right: 0rem;
                 }
+                margin: 0 0 .5rem 0;
+                .title{
+                    margin: .3rem 1rem;
+                    color: #d34545;
+                }
+                .subtitle{
+                    text-align: center;
+                    @media screen and (min-width:$large){
+                        text-align: left;
+                    }
+                    margin: .5rem 1rem;
+                    font-weight: normal;
+                    font-size: 1.2rem;
+                }
+
+
             }
             .profile{
                 @include flex();

@@ -41,7 +41,6 @@ section#about {
 section#about img {
   display: block;
   margin: auto;
-  order: 1;
   max-height: 35vh;
   width: auto;
   border-radius: 50%;
@@ -54,6 +53,10 @@ section#about img {
   }
 }
 
+section#about img.right-img {
+  order: 1;
+}
+
 @media screen and (min-width: 1024px) {
   section#about article {
     display: -webkit-box;
@@ -63,7 +66,7 @@ section#about img {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 2rem 0rem;
+    padding: 2rem 0rem .5rem 0rem;
   }
 }
 

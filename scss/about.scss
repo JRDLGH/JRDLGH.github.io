@@ -14,7 +14,6 @@ section#about{
     img{
         display: block;
         margin: auto;
-        order:1;
         max-height: 35vh;
         width: auto;
         border-radius: 50%;
@@ -23,13 +22,19 @@ section#about{
             max-height: 50vh;
             z-index: 10;
         }
+        &.right-img{
+            order:1;
+        }
+        &.left-img{
+            
+        }
     }
     article{
         @media screen and (min-width:$large){
             @include flex();
             justify-content: center;
             align-items: flex-start;
-            padding: 2rem 0rem;
+            padding: 2rem 0rem .5rem 0rem;
         }
         div.content{
             margin-bottom: 1rem;

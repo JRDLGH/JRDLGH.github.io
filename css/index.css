@@ -70,9 +70,38 @@ body main section p {
   padding: .5rem;
 }
 
-body main section h1.title {
+body main section div.title {
+  border-left: .2rem solid #e64e4e;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: .2rem solid #e64e4e;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 0 0 .5rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body main section div.title {
+    border-right: 0rem;
+  }
+}
+
+body main section div.title .title {
+  margin: .3rem 1rem;
+  color: #d34545;
+}
+
+body main section div.title .subtitle {
   text-align: center;
-  width: 100%;
+  margin: .5rem 1rem;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  body main section div.title .subtitle {
+    text-align: left;
+  }
 }
 
 body main section .profile {
