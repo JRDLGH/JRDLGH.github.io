@@ -87,9 +87,53 @@
   }
   
   .slide_img {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: -1;
+    .slide-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .btn-discover{
+        flex-grow: 0;
+        width: 10rem;
+        font-size: 1rem;
+        border-radius: .2rem;
+      }
+    }
+    &#one{
+      background-image: url('../img/header-banner.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &#two{
+      background-image: url('../img/header-banner.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &#three{
+      background-image: url('../img/header-banner.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &#four{
+      background-image: url('../img/header-banner.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &#five{
+      background-image: url('../img/header-banner.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
   
+
+
   #i1:checked ~ #one,
   #i2:checked ~ #two,
   #i3:checked ~ #three,
@@ -109,47 +153,18 @@
   
   @keyframes scroll {
     0% {
-      opacity: .4;
+      opacity: .8;
     }
     100% {
       opacity: 1;
     }
   }
   
-  /* .yt{
-      margin: 0 auto;
-      margin-top: 50px;
-      position: relative;
-      width: 150px;
-      height:50px;
-      border: outset #2c2c2c 4px;
-      border-radius: 10px;
-      text-align: center;
-      font-size: 30pt;
-      transition: .5s;
-  }
-  
-  .yt a{
-      text-decoration: none;
-      color: #4c4c4c;
-      transition: .5s;
-  }
-  
-  .yt:hover{
-      background: #4c4c4c;
-      transition: .3s;
-  }
-  
-  .yt:hover a{
-      color: #fff;
-      transition: .3s;
-  }
-   */
   @media screen and (max-width: 685px) {
     .slider {
       border: none;
       width: 100%;
-      height: 0;
+      height: 50vh;
       padding-bottom: 55%;
     }
     label span {
