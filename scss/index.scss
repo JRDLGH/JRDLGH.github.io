@@ -21,6 +21,9 @@ body{
             font-size: 2rem;
             color: rgba($color: #000000, $alpha: 0.7)
         }
+        h2{
+            color: #484848;
+        }
         background-color: rgb(240, 240, 240);
         section{
             @include flex();
@@ -191,4 +194,23 @@ a{
 }
 .container{
     @include flex();
+}
+.btn-discover{
+    background-color: #de4444;
+    border:none;
+    text-transform: uppercase;
+    outline-color: transparent;
+    margin: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px black;
+    box-shadow: 2px 2px 8px rgba($color: #000000, $alpha: 0.3);
+    color: white;
+    font-size: 1.2rem;
+    border-radius: .2rem;
+    transition: all .5s ease-in-out;
+    &:hover{
+        background-color: rgb(255, 255, 255);
+        color:#de4444;
+    }
 }

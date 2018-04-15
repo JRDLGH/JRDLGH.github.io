@@ -7,7 +7,8 @@ $link-hover-color: #f1f1f1;
 $link-bg-hover-color:#ff6060;
 $link-bg-active-color:#e06d6d;
 $banner-text-color:#e64e4e;
-$banner-title-color:black;
+$banner-title-color:#e64e4e;
+$banner-special-color:rgb(255, 255, 255);
 
 header{
     @include flex();
@@ -213,7 +214,7 @@ div{
             flex-direction: column;
             align-items: center;
             text-transform: uppercase;
-            color: rgba($color:$banner-title-color, $alpha: 0.8);
+            color: rgba($color:$banner-special-color, $alpha: 1);
             font-weight: normal;
             text-align: center;
             font-size: 3rem;

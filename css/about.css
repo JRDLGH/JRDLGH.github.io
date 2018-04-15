@@ -32,7 +32,7 @@ section#about {
   flex-direction: column;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   section#about {
     align-items: flex-start;
     width: 85%;
@@ -47,7 +47,7 @@ section#about img {
   border-radius: 50%;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   section#about img {
     max-height: 50vh;
     z-index: 10;
@@ -64,7 +64,7 @@ section#about img.left-img {
   max-width: calc(50vh);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   section#about article {
     display: -webkit-box;
     display: -webkit-flex;
@@ -81,7 +81,7 @@ section#about article div.content {
   margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   section#about article div.content {
     display: -webkit-box;
     display: -webkit-flex;
@@ -106,7 +106,7 @@ section#about article div.content p {
   font-size: 1.1rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   section#about article div.content p {
     padding: 1rem;
   }
@@ -118,10 +118,18 @@ section#about article div.content .skills {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: space-evenly;
+}
+
+@media screen and (min-width: 1200px) {
+  section#about article div.content .skills {
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 
 section#about article div.content .skills li {
@@ -131,12 +139,15 @@ section#about article div.content .skills li {
   display: -ms-flexbox;
   display: flex;
   align-items: center;
-  padding: 1.2rem;
+  padding: .5rem;
+  flex-direction: column;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   section#about article div.content .skills li {
-    padding: 3rem 3.5rem;
+    padding: 3vh 3.5rem;
+    flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -172,7 +183,7 @@ section#activities div#acti-banner {
   height: 28vh;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   section#activities div#acti-banner {
     height: 42vh;
     background-position: bottom;

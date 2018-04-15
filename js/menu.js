@@ -24,23 +24,38 @@ $(function(){
     });
     $('.anchor').click(function(evt){
         evt.preventDefault();
-        if(!$(evt.target.hash).is(':animated')){
-            var position = $(this.hash).offset().top;
-            var navHeight = 0;
-            if(position > 50){
-                var navHeight = getHeight($('header')) ? getHeight($('header')): 0;
-            }
-            if(isMobile()){
-                //Close the menu
-                $('.menu-icon').click();
-            }
-            toggleActive($(this));
-            $('html, body').animate({
-                scrollTop: position - navHeight
-            },1000);
-        }
+        navigate(this,evt);
+    });
+    $('.btn-discover').click(function(evt){
+        evt.preventDefault();
+        navigate(this,evt);
     });
 });
+
+function navigate(link,evt){
+    if(!$(evt.target.hash).is(':animated')){
+        var position = $(link.hash).offset().top;
+        var navHeight = 0;
+        if(position > 50){
+            var navHeight = getHeight($('header')) ? getHeight($('header')): 0;
+        }
+        if(isMobile()){
+            //Close the menu
+            closeMenu();
+        }
+        toggleActive($(link));
+        $('html, body').animate({
+            scrollTop: position - navHeight
+        },1000);
+    }
+}
+
+function closeMenu(){
+    if($('.menu-icon').hasClass('is-opened')){
+        $('#menu').slideUp();
+        $('.menu-icon').removeClass('is-opened');
+    }
+}
 function getHeight(elem){
     if(elem){
         return elem.outerHeight();

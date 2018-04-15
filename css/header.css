@@ -286,7 +286,7 @@ div#banner h1 {
   flex-direction: column;
   align-items: center;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.8);
+  color: white;
   font-weight: normal;
   text-align: center;
   font-size: 3rem;
@@ -294,7 +294,7 @@ div#banner h1 {
 }
 
 div#banner h1 .bigger {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(230, 78, 78, 0.8);
   font-weight: bold;
   width: 100%;
   font-size: 3.5rem;

@@ -1,5 +1,5 @@
 @import 'mixin';
-$large: 1024px;
+$large: 1200px;
 section#about{
     width: 95%;
     margin: auto;
@@ -62,16 +62,24 @@ section#about{
             }
             .skills{
                 @include flex();
-                justify-content: space-around;
                 flex-direction: row;
                 flex-wrap: wrap;
-                align-items: center;
+                justify-content: space-evenly;
+                @media screen and (min-width:$large){
+                    justify-content: space-around;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
                 li{
                     @include flex();
                     align-items: center;
-                    padding: 1.2rem;
+                    padding: .5rem;
+                    flex-direction: column;
                     @media screen and (min-width:$large){
-                        padding: 3rem 3.5rem;
+                        padding: 3vh 3.5rem;
+                        flex-direction: row;  
+                        align-items: center;
                     }
                     svg{
                         color: #d34545;
