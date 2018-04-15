@@ -6,20 +6,21 @@ section#about{
     @include flex();
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    // min-height: 100vh;
     @media screen and (min-width:$large){
         align-items: flex-start;
-        height: 68vh;
+        // min-height: 68vh;
     }
     img{
         display: block;
         margin: auto;
         order:1;
-        max-height: 350px;
+        max-height: 35vh;
         width: auto;
         border-radius: 50%;
         @media screen and (min-width:$large){
-            width: 35%;
+            // width: 35%;
+            max-height: 50vh;
             z-index: 10;
         }
     }
@@ -31,6 +32,7 @@ section#about{
             padding: 2rem 0rem;
         }
         div.content{
+            margin-bottom: 1rem;
             @media screen and (min-width:$large){
                 @include flex();
                 flex-direction: column;
