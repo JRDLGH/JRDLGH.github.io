@@ -1,3 +1,4 @@
+$large:1200px;
 #i1, #i2, #i3, #i4, #i5 {
     display: none;
   }
@@ -94,15 +95,58 @@
     align-items: center;
     z-index: -1;
     .slide-content{
+      width: 75%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      // justify-content: center;
       align-items: center;
+      background-color: rgba($color: #ffffff, $alpha: 0.2);
       .btn-discover{
         flex-grow: 0;
         width: 10rem;
         font-size: 1rem;
         border-radius: .2rem;
+        text-align: center;
+      }
+      .slide-title{
+        background-color:transparent;
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media screen and (min-width:$large){
+          background-color: rgba($color: #000000, $alpha: 0.1);
+        }
+        h2{
+          // width: 100%;
+          font-size: 2rem;
+          color:#de4444;
+          margin: 1rem 0;
+          @media screen and (min-width:$large){
+            margin: 1rem 1rem;
+          }
+        }
+        span{
+          &.date{
+            padding: 0 .5rem;
+            @media screen and (min-width:$large){
+              float: none;
+            }
+          }
+          svg{
+            color:#de4444;
+            margin: 0 .5rem;
+          }
+        }
+      }
+      p{
+        display: none;
+        padding: 2rem;
+        text-align: justify;
+        @media screen and (min-width:$large){
+          display: block;
+        }
       }
     }
     &#one{

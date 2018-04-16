@@ -175,6 +175,7 @@ section#activities div#acti-banner {
   display: -ms-flexbox;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-image: url("../img/acti.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -185,13 +186,13 @@ section#activities div#acti-banner {
 
 @media screen and (min-width: 1200px) {
   section#activities div#acti-banner {
-    height: 42vh;
+    height: 32vh;
     background-position: bottom;
   }
 }
 
-section#activities div#acti-banner h1 {
-  color: #2e2020;
+section#activities div#acti-banner div.title h1.title {
   font-weight: normal;
+  text-align: center;
 }
 /*# sourceMappingURL=about.css.map */
