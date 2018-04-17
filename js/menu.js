@@ -26,7 +26,7 @@ $(function(){
         evt.preventDefault();
         navigate(this,evt);
     });
-    $('.btn-discover').click(function(evt){
+    $('#intro .btn-discover').click(function(evt){
         evt.preventDefault();
         navigate(this,evt);
     });
@@ -45,7 +45,7 @@ function navigate(link,evt){
         }
         toggleActive($(link));
         $('html, body').animate({
-            scrollTop: position - navHeight
+            scrollTop: position+1 - navHeight
         },1000);
     }
 }

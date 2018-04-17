@@ -26,12 +26,16 @@ body{
         }
         background-color: rgb(240, 240, 240);
         section{
+            width: 95%;
             @include flex();
+            align-items: center;
             flex-direction: column;
-            justify-content: flex-start;
-            width: 100%;
-            min-height: 100vh;
-            padding: 1rem 0;
+            @media screen and (min-width:$large){
+                align-items: flex-start;
+                width: 85%;
+            }
+            margin: auto;
+            padding: 2rem 0;
             a{
                 color:#ff6060;
                 &:hover{
@@ -76,17 +80,16 @@ body{
                 @media screen and (min-width:$large){
                     padding-top: .5rem;
                     flex-direction: row;
-                    align-items: none;
+                    align-items: flex-start;
                     justify-content: flex-start;
                 }
-                background-color: rgb(228, 228, 228);
+                margin: 0;
                 width: 100%;
                 .pic{
                     width: 100%;
                     @media screen and (min-width:$large){
-                        width: 35%;
+                        width: 25%;
                         /* ADDED */
-                        background-color: #cecece;
                         border-top-right-radius: 80% 100%;
                         border-bottom-right-radius: 80% 100%;
                         /* END ADDED */
@@ -97,20 +100,16 @@ body{
                     justify-content: center;
                     align-items: center;
                     img{
-                        margin-left: 0px;
-                        @media screen and (min-width:$large){
-                            margin-left:4.5rem;
-                        }
                         border-radius: 50%;
                         // height: 90%;
                         width: 85%;
                     }
                 }
                 .info{
-                    padding: 2rem .5rem;
+                    padding: 1rem .5rem;
                     width: 100%;
                     @media screen and (min-width:$large){
-                        width: 65%;
+                        padding: 0 .5rem;                        
                     }
                     flex-grow: 1;
                     text-align: justify;
@@ -125,42 +124,61 @@ body{
                         margin-bottom: 1rem;
                         font-size: 2rem;
                         text-transform: uppercase;
-                        background-color: #cecece;
                         padding: 0.8rem 1rem;
                     }
-                    p{
-                        font-size: 1.2rem;
-                        margin: 1.8rem 0;
-                        padding-left: 1rem;
+                    .content{
+                        width: 75%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        @media screen and (min-width:$large){
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            justify-content: flex-start;
+                        }
+                        p{
+                            width: 100%;
+                            svg{
+                                margin: 0 .5rem;
+                            }
+                            @media screen and (min-width:$large){
+                                width: 50%;
+                                font-size: 1.2rem;
+                                margin: .75rem 0;
+                                padding-left: 1.5rem;
+                            }
+                        }
                     }
                 }
             }
             .parcours{
+                margin: 0;
+                width: 100%;                
                 min-height: 60vh;
-                background-color: #974949;
-                color: white;
-                padding: 2rem;
+                color: rgb(0, 0, 0);
                 .accordion{
+                    width: 100%;
                     margin: 1rem 0;
-                    box-shadow: 0px 0px 5px #422020;
                     border-radius: 0px 0px 5px 5px;
                     &.is-opened{
-                        .title img{
+                        .acc-title img{
                             transform: scaleY(-1);
                         }
                     }
                     .content{
                         display: none;
                     }
-                    .title{
+                    .acc-title{
                         @include flex();
                         flex-direction: row;
                         justify-content: space-between;
                         align-items: center;
                         padding: 1rem;
-                        background-color: #efefef;
+                        background-color: #e7e7e7;
                         h3{
-                            color:#974949;
+                            color:#de4444;
                             text-transform: uppercase;
                         }
                         img{
@@ -210,7 +228,41 @@ a{
     border-radius: .2rem;
     transition: all .5s ease-in-out;
     &:hover{
-        background-color: rgb(255, 255, 255);
+        background-color: #424242;
         color:#de4444;
+    }
+}
+.red{
+    color: #de4444;
+}
+.section-sep{
+    height: 1vh;
+    width: 95%;
+    margin: 1rem auto;
+    @media screen and (min-width:$large){
+        margin: 3rem auto;    
+    }
+    border: 0;
+    border-top: 1px solid rgba($color: #000000, $alpha: 0.3)
+}
+
+.alert-info{
+    margin: 2rem;
+    padding: 1rem;
+    background-color: rgba(116, 163, 252,0.2);
+}
+
+.btn-download{
+    background-color: rgb(111, 156, 38);
+    padding: .5rem;
+    color: white;
+    border-radius: .1rem;
+    transition: all .5s;
+    svg{
+        margin-right:.5rem;
+    }
+    &:hover{
+        background-color: rgb(137, 194, 45);
+        color:white;
     }
 }

@@ -50,16 +50,23 @@ body main h2 {
 }
 
 body main section {
+  width: 95%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  justify-content: flex-start;
-  width: 100%;
-  min-height: 100vh;
-  padding: 1rem 0;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body main section {
+    align-items: flex-start;
+    width: 85%;
+  }
 }
 
 body main section a {
@@ -117,7 +124,7 @@ body main section .profile {
   flex-direction: column;
   align-items: center;
   padding-top: 1rem;
-  background-color: #e4e4e4;
+  margin: 0;
   width: 100%;
 }
 
@@ -125,7 +132,7 @@ body main section .profile {
   body main section .profile {
     padding-top: .5rem;
     flex-direction: row;
-    align-items: none;
+    align-items: flex-start;
     justify-content: flex-start;
   }
 }
@@ -145,9 +152,8 @@ body main section .profile .pic {
 
 @media screen and (min-width: 1024px) {
   body main section .profile .pic {
-    width: 35%;
+    width: 25%;
     /* ADDED */
-    background-color: #cecece;
     border-top-right-radius: 80% 100%;
     border-bottom-right-radius: 80% 100%;
     /* END ADDED */
@@ -155,19 +161,12 @@ body main section .profile .pic {
 }
 
 body main section .profile .pic img {
-  margin-left: 0px;
   border-radius: 50%;
   width: 85%;
 }
 
-@media screen and (min-width: 1024px) {
-  body main section .profile .pic img {
-    margin-left: 4.5rem;
-  }
-}
-
 body main section .profile .info {
-  padding: 2rem .5rem;
+  padding: 1rem .5rem;
   width: 100%;
   flex-grow: 1;
   text-align: justify;
@@ -175,7 +174,7 @@ body main section .profile .info {
 
 @media screen and (min-width: 1024px) {
   body main section .profile .info {
-    width: 65%;
+    padding: 0 .5rem;
   }
 }
 
@@ -187,7 +186,6 @@ body main section .profile .info h2 {
   margin-bottom: 1rem;
   font-size: 2rem;
   text-transform: uppercase;
-  background-color: #cecece;
   padding: 0.8rem 1rem;
 }
 
@@ -197,26 +195,54 @@ body main section .profile .info h2 {
   }
 }
 
-body main section .profile .info p {
-  font-size: 1.2rem;
-  margin: 1.8rem 0;
-  padding-left: 1rem;
+body main section .profile .info .content {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+  body main section .profile .info .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+body main section .profile .info .content p {
+  width: 100%;
+}
+
+body main section .profile .info .content p svg {
+  margin: 0 .5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  body main section .profile .info .content p {
+    width: 50%;
+    font-size: 1.2rem;
+    margin: .75rem 0;
+    padding-left: 1.5rem;
+  }
 }
 
 body main section .parcours {
+  margin: 0;
+  width: 100%;
   min-height: 60vh;
-  background-color: #974949;
-  color: white;
-  padding: 2rem;
+  color: black;
 }
 
 body main section .parcours .accordion {
+  width: 100%;
   margin: 1rem 0;
-  box-shadow: 0px 0px 5px #422020;
   border-radius: 0px 0px 5px 5px;
 }
 
-body main section .parcours .accordion.is-opened .title img {
+body main section .parcours .accordion.is-opened .acc-title img {
   transform: scaleY(-1);
 }
 
@@ -224,7 +250,7 @@ body main section .parcours .accordion .content {
   display: none;
 }
 
-body main section .parcours .accordion .title {
+body main section .parcours .accordion .acc-title {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -234,15 +260,15 @@ body main section .parcours .accordion .title {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #efefef;
+  background-color: #e7e7e7;
 }
 
-body main section .parcours .accordion .title h3 {
-  color: #974949;
+body main section .parcours .accordion .acc-title h3 {
+  color: #de4444;
   text-transform: uppercase;
 }
 
-body main section .parcours .accordion .title img {
+body main section .parcours .accordion .acc-title img {
   height: 20px;
   transform: scaleY(1);
   transition: transform 0.3s ease-in;
@@ -296,7 +322,48 @@ a:hover {
 }
 
 .btn-discover:hover {
-  background-color: white;
+  background-color: #424242;
   color: #de4444;
+}
+
+.red {
+  color: #de4444;
+}
+
+.section-sep {
+  height: 1vh;
+  width: 95%;
+  margin: 1rem auto;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 1024px) {
+  .section-sep {
+    margin: 3rem auto;
+  }
+}
+
+.alert-info {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: rgba(116, 163, 252, 0.2);
+}
+
+.btn-download {
+  background-color: #6f9c26;
+  padding: .5rem;
+  color: white;
+  border-radius: .1rem;
+  transition: all .5s;
+}
+
+.btn-download svg {
+  margin-right: .5rem;
+}
+
+.btn-download:hover {
+  background-color: #89c22d;
+  color: white;
 }
 /*# sourceMappingURL=index.css.map */

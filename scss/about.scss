@@ -18,9 +18,10 @@ section#about{
         max-height: 35vh;
         width: auto;
         border-radius: 50%;
+        padding: 0 1rem; 
         @media screen and (min-width:$large){
             // width: 35%;
-            max-height: 50vh;
+            max-height: 40vh;
             z-index: 10;
         }
         &.right-img{
@@ -91,30 +92,14 @@ section#about{
     }
 }
 section#activities{
-    padding: 0;
-    @include flex();
-    min-height: 100vh;
     height: auto;
-    width: 100%;
     div#acti-banner{
         @include flex();
         align-items: center;
-        justify-content: center;    
-        background-image: url("../img/acti.jpg");
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 28vh;    
-        @media screen and (min-width:$large){
-            height: 32vh;
-            background-position: bottom;        
-        }
+        margin-bottom: 2rem;
         div.title{
             h1.title{
-                font-weight: normal;
-                text-align: center;
-                // width: 100%;
+                text-align: left;
             }
         }
     }

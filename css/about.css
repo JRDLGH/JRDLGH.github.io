@@ -45,11 +45,12 @@ section#about img {
   max-height: 35vh;
   width: auto;
   border-radius: 50%;
+  padding: 0 1rem;
 }
 
 @media screen and (min-width: 1200px) {
   section#about img {
-    max-height: 50vh;
+    max-height: 40vh;
     z-index: 10;
   }
 }
@@ -157,15 +158,7 @@ section#about article div.content .skills li svg {
 }
 
 section#activities {
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
   height: auto;
-  width: 100%;
 }
 
 section#activities div#acti-banner {
@@ -175,24 +168,10 @@ section#activities div#acti-banner {
   display: -ms-flexbox;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-image: url("../img/acti.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 28vh;
-}
-
-@media screen and (min-width: 1200px) {
-  section#activities div#acti-banner {
-    height: 32vh;
-    background-position: bottom;
-  }
+  margin-bottom: 2rem;
 }
 
 section#activities div#acti-banner div.title h1.title {
-  font-weight: normal;
-  text-align: center;
+  text-align: left;
 }
 /*# sourceMappingURL=about.css.map */

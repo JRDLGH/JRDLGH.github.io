@@ -1,5 +1,5 @@
 $(function(){
-    $('.accordion div.title').click(function(){
+    $('.accordion div.acc-title').click(function(){
         $(this).parent().toggleClass('is-opened');
         if($(this).parent().hasClass('is-opened')){
             $(this).next('.content').slideDown();
