@@ -1,4 +1,4 @@
-#i1, #i2, #i3, #i4, #i5 {
+#i1, #i2, #i3, #i4, #i5, #i6, #i7, #i8 {
   display: none;
 }
 
@@ -67,7 +67,7 @@
   height: 11px;
   position: absolute;
   text-align: center;
-  z-index: 99;
+  z-index: 10;
   cursor: default;
 }
 
@@ -205,34 +205,55 @@
 }
 
 .slide_img#one {
-  background-image: url("../img/activities/csharp.jpg");
+  background-image: url("../img/activities/code.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .slide_img#two {
-  background-image: url("../img/activities/asp.jpg");
+  background-image: url("../img/activities/csharp.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .slide_img#three {
-  background-image: url("../img/activities/bi.png");
+  background-image: url("../img/activities/asp.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .slide_img#four {
-  background-image: url("../img/activities/hackaton.jpg");
+  background-image: url("../img/activities/bi.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .slide_img#five {
+  background-image: url("../img/activities/hackaton.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide_img#six {
+  background-image: url("../img/activities/devday.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide_img#seven {
+  background-image: url("../img/activities/devday.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide_img#eight {
   background-image: url("../img/activities/devday.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -243,7 +264,10 @@
 #i2:checked ~ #two,
 #i3:checked ~ #three,
 #i4:checked ~ #four,
-#i5:checked ~ #five {
+#i5:checked ~ #five,
+#i6:checked ~ #six,
+#i7:checked ~ #seven,
+#i8:checked ~ #eight {
   z-index: 9;
   animation: scroll 1s;
 }
@@ -252,7 +276,10 @@
 #i2:checked ~ #nav_slide #dot2,
 #i3:checked ~ #nav_slide #dot3,
 #i4:checked ~ #nav_slide #dot4,
-#i5:checked ~ #nav_slide #dot5 {
+#i5:checked ~ #nav_slide #dot5,
+#i6:checked ~ #nav_slide #dot6,
+#i7:checked ~ #nav_slide #dot7,
+#i8:checked ~ #nav_slide #dot8 {
   background-color: #e64e4e;
 }
 
@@ -339,12 +366,7 @@ div.slide-details .slide-details-content div p {
   }
 }
 
-div.slide-details #slide-details-5 {
-  display: none;
-  transition: display 3s ease-in-out;
-}
-
-div.slide-details #slide-details-5.is-opened {
+div.slide-details .slide-details-content.is-opened {
   display: flex;
 }
 /*# sourceMappingURL=slider.css.map */

@@ -1,5 +1,5 @@
 $large:1200px;
-#i1, #i2, #i3, #i4, #i5 {
+#i1, #i2, #i3, #i4, #i5, #i6, #i7, #i8 {
     display: none;
   }
   
@@ -65,7 +65,7 @@ $large:1200px;
     height: 11px;
     position: absolute;
     text-align: center;
-    z-index: 99;
+    z-index: 10;
     cursor: default;
   }
   
@@ -176,44 +176,64 @@ $large:1200px;
       }
     }
     &#one{
-      background-image: url('../img/activities/csharp.jpg');
+      background-image: url('../img/activities/code.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
     }
     &#two{
+      background-image: url('../img/activities/csharp.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &#three{
       background-image: url('../img/activities/asp.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;      
     }
-    &#three{
+    &#four{
       background-image: url('../img/activities/bi.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;      
     }
-    &#four{
+    &#five{
       background-image: url('../img/activities/hackaton.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;      
     }
-    &#five{
+    &#six{
       background-image: url('../img/activities/devday.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;      
     }
+    &#seven{
+      background-image: url('../img/activities/devday.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &#eight{
+      background-image: url('../img/activities/devday.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
   }
-  
+}
 
 
   #i1:checked ~ #one,
   #i2:checked ~ #two,
   #i3:checked ~ #three,
   #i4:checked ~ #four,
-  #i5:checked ~ #five {
+  #i5:checked ~ #five,
+  #i6:checked ~ #six,
+  #i7:checked ~ #seven,
+  #i8:checked ~ #eight{
     z-index: 9;
     animation: scroll 1s;
   }
@@ -222,7 +242,10 @@ $large:1200px;
   #i2:checked ~ #nav_slide #dot2,
   #i3:checked ~ #nav_slide #dot3,
   #i4:checked ~ #nav_slide #dot4,
-  #i5:checked ~ #nav_slide #dot5 {
+  #i5:checked ~ #nav_slide #dot5,
+  #i6:checked ~ #nav_slide #dot6,
+  #i7:checked ~ #nav_slide #dot7,
+  #i8:checked ~ #nav_slide #dot8{
     background-color:rgba($color: #e64e4e, $alpha: 1.0);
   }
   
@@ -301,10 +324,6 @@ $large:1200px;
           }
         }
       }
-    }
-    #slide-details-5{
-      display: none;
-      transition: display 3s ease-in-out;
       &.is-opened{
         display: flex;
       }
