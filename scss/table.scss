@@ -1,6 +1,7 @@
 $large:1200px;
 $table-main-color:#de4444;
 $table-second-color:#000000;
+$table-head-color:#ffffff;
 
 
 table{
@@ -11,8 +12,10 @@ table{
         thead{
             background-color: rgba($color: $table-main-color, $alpha: 1);
             margin-bottom: .2rem;
+            color:$table-head-color;
             tr{
                 th{
+                    font-weight: normal;
                     padding: .7rem;
                 }
             }

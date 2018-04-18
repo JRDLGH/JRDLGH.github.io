@@ -7,9 +7,11 @@ table.control-table {
 table.control-table thead {
   background-color: #de4444;
   margin-bottom: .2rem;
+  color: #ffffff;
 }
 
 table.control-table thead tr th {
+  font-weight: normal;
   padding: .7rem;
 }
 

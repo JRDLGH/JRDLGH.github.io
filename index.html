@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/control.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i" rel="stylesheet">
 </head>
 
@@ -152,8 +153,8 @@
                                     </span>
                                 </span>
                             </div>
-                            <p>Vous pouvez naviguer entre les différentes activités grâce à ce petit slider . Si vous préférez
-                                voir, un résumé, cliquez sur le bouon ci-dessous.</p>
+                            <p>Vous pouvez naviguer entre les différentes activités grâce à ce petit slider. Si vous préférez
+                                voir un résumé, cliquez sur le bouton ci-dessous.</p>
                             <a href="#slide-details-1" class="btn-discover details">Voir le résumé</a>
                         </div>
 
@@ -375,8 +376,10 @@
 
                 </div>
                 <div class="slide-details" class="container">
-                    <div class="slide-details-content" id="slide-details-1">
-                        <h1>Résumé</h1>
+                    <div class="slide-details-content is-opened" id="slide-details-1">
+                        <div class="slide-header">
+                            <h1>Résumé</h1>
+                        </div>
                         <div class="content">
                             <div class="responsive-table">
 
@@ -384,7 +387,7 @@
                                     <thead>
                                         <tr>
                                             <th>Activité</th>
-                                            <th>Lieux</th>
+                                            <th>Lieu</th>
                                             <th>Date</th>
                                             <th>H valorisées</th>
                                             <th>H réelles</th>
@@ -486,7 +489,9 @@
                         </div>
                     </div>
                     <div class="slide-details-content" id="slide-details-6">
-                        <h1>DevDay</h1>
+                        <div class="slide-header">
+                            <h1>DevDay</h1>
+                        </div>
                         <div class="content">
                             <p>
                                 Le DevDay est une journée durant laquelle une série de conférences sur de nouvelles technologies sont données à des développeurs,
@@ -515,7 +520,9 @@
 
                     </div>
                     <div class="slide-details-content" id="slide-details-7">
-                        <h1>DevDouzzz</h1>
+                        <div class="slide-header">
+                            <h1>DevDouzzz</h1>
+                        </div>
                         <div class="content">
                             <p>
                                 Le DevDay est une journée durant laquelle une série de conférences sur de nouvelles technologies sont données à des développeurs,
@@ -559,9 +566,13 @@
                         <br>
                     </p>
                     <a href="" class="btn-download">
-                        <i class="fas fa-arrow-alt-circle-down"></i>Télécharger mon CV PDF
+                            <i class="fas fa-download"></i>Télécharger mon CV au format PDF
                     </a>
                 </div>
+
+                <!-- CV SECTION -->
+
+
                 <!-- <section class="profile">
                     <div class="pic">
                         <img src="img/pp.jpg" alt="picture">
@@ -651,6 +662,9 @@
     <footer>
 
     </footer>
+    <script>
+            FontAwesomeConfig = { searchPseudoElements: true };
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="js/menu.js"></script>
