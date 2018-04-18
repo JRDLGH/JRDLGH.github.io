@@ -6,4 +6,7 @@ $(function(){
         }
         $(this.hash).toggleClass('is-opened');
     });
+    $('a.btn-download.disabled').click(function(evt){
+        return false;
+    });
 });
