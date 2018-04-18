@@ -271,6 +271,13 @@
   background-position: center;
 }
 
+.slide_img#eight {
+  background-image: url("../img/activities/portfolio.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 #i1:checked ~ #one,
 #i2:checked ~ #two,
 #i3:checked ~ #three,
@@ -278,7 +285,8 @@
 #i5:checked ~ #five,
 #i6:checked ~ #six,
 #i7:checked ~ #seven,
-#i8:checked ~ #eight {
+#i8:checked ~ #eight,
+#i8:checked ~ #nine {
   z-index: 9;
   animation: scroll 1s;
 }
@@ -290,7 +298,8 @@
 #i5:checked ~ #nav_slide #dot5,
 #i6:checked ~ #nav_slide #dot6,
 #i7:checked ~ #nav_slide #dot7,
-#i8:checked ~ #nav_slide #dot8 {
+#i8:checked ~ #nav_slide #dot8,
+#i8:checked ~ #nav_slide #dot9 {
   background-color: #e64e4e;
 }
 
@@ -394,6 +403,7 @@ div.slide-details .slide-details-content .content p {
 
 div.slide-details .slide-details-content .responsive-table {
   display: block;
+  margin-top: 1rem;
 }
 
 div.slide-details .slide-details-content.is-opened {
