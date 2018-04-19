@@ -5,7 +5,8 @@
 #i5,
 #i6,
 #i7,
-#i8 {
+#i8,
+#i9 {
   display: none;
 }
 
@@ -258,21 +259,21 @@
 }
 
 .slide_img#seven {
-  background-image: url("../img/activities/devday.jpg");
+  background-image: url("../img/activities/undbw.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .slide_img#eight {
-  background-image: url("../img/activities/devday.jpg");
+  background-image: url("../img/activities/gsk.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.slide_img#eight {
-  background-image: url("../img/activities/portfolio.png");
+.slide_img#nine {
+  background-image: url("../img/activities/portfolio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -286,7 +287,7 @@
 #i6:checked ~ #six,
 #i7:checked ~ #seven,
 #i8:checked ~ #eight,
-#i8:checked ~ #nine {
+#i9:checked ~ #nine {
   z-index: 9;
   animation: scroll 1s;
 }
@@ -299,7 +300,7 @@
 #i6:checked ~ #nav_slide #dot6,
 #i7:checked ~ #nav_slide #dot7,
 #i8:checked ~ #nav_slide #dot8,
-#i8:checked ~ #nav_slide #dot9 {
+#i9:checked ~ #nav_slide #dot9 {
   background-color: #e64e4e;
 }
 
@@ -404,6 +405,7 @@ div.slide-details .slide-details-content .content p {
 div.slide-details .slide-details-content .responsive-table {
   display: block;
   margin-top: 1rem;
+  width: 100%;
 }
 
 div.slide-details .slide-details-content.is-opened {
