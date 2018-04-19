@@ -4,7 +4,13 @@ $(function(){
         if($('.slide-details-content').hasClass('is-opened')){
             $('.slide-details-content').removeClass('is-opened');
         }
-        $(this.hash).toggleClass('is-opened');
+        console.log($(this.hash).child('.is-opened'));
+        if($(this.hash).hasClass('is-opened')){
+            console.log('Already opened');
+            $('.slide-details-content').removeClass('is-opened');            
+        }else{
+            $(this.hash).toggleClass('is-opened');
+        }
     });
     $('a.btn-download.disabled').click(function(evt){
         return false;

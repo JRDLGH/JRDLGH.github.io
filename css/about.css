@@ -66,6 +66,12 @@ section#about img.left-img {
 }
 
 @media screen and (min-width: 1200px) {
+  section#about img.left-img {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   section#about article {
     display: -webkit-box;
     display: -webkit-flex;
@@ -113,7 +119,7 @@ section#about article div.content p {
   }
 }
 
-section#about article div.content .skills {
+section#about .skills {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -125,7 +131,7 @@ section#about article div.content .skills {
 }
 
 @media screen and (min-width: 1200px) {
-  section#about article div.content .skills {
+  section#about .skills {
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
@@ -133,7 +139,7 @@ section#about article div.content .skills {
   }
 }
 
-section#about article div.content .skills li {
+section#about .skills li {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -145,14 +151,13 @@ section#about article div.content .skills li {
 }
 
 @media screen and (min-width: 1200px) {
-  section#about article div.content .skills li {
-    padding: 3vh 3.5rem;
+  section#about .skills li {
     flex-direction: row;
     align-items: center;
   }
 }
 
-section#about article div.content .skills li svg {
+section#about .skills li svg {
   color: #d34545;
   margin: .5rem;
 }
