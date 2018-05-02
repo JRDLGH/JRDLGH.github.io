@@ -266,3 +266,41 @@ a{
         color:white;
     }
 }
+
+.soft-skills{
+    @include flex();
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
+    @media screen and (min-width:$large)
+    {
+        flex-direction: row;
+    }
+    width: 100%;
+    
+    li{
+        text-align: center;
+        @include flex();
+        align-items: center;
+        align-content: space-between;
+        width: calc(100%/2);
+        @media screen and (min-width:$large){
+            @include flex();
+            align-items: center;
+            width: calc(100%/3);
+        }
+        
+        padding: .5rem;
+        svg
+        {
+            color:#de4444;
+            padding: 0rem .5rem .5rem 0rem ;
+        }
+        
+        
+    }
+}
+
+.full-width{
+    width: 100%;
+}

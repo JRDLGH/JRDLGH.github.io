@@ -71,6 +71,10 @@ section#about img.left-img {
   }
 }
 
+section#about article {
+  width: 100%;
+}
+
 @media screen and (min-width: 1200px) {
   section#about article {
     display: -webkit-box;
@@ -85,6 +89,7 @@ section#about img.left-img {
 }
 
 section#about article div.content {
+  width: 100%;
   margin-bottom: 1rem;
 }
 
@@ -100,6 +105,10 @@ section#about article div.content {
   }
 }
 
+section#about article div.content div {
+  width: 100%;
+}
+
 section#about article div.content h2 {
   padding: 1rem;
   text-align: center;
@@ -108,6 +117,7 @@ section#about article div.content h2 {
 }
 
 section#about article div.content p {
+  width: 100%;
   padding: .5rem 0;
   text-align: justify;
   font-size: 1.1rem;
