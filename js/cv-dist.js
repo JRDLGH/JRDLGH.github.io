@@ -1,0 +1,1 @@
+"use strict";$(function(){$(".accordion div.acc-title").click(function(){$(this).parent().toggleClass("is-opened"),$(this).parent().hasClass("is-opened")?$(this).next(".content").slideDown():$(this).next(".content").slideUp()})});
