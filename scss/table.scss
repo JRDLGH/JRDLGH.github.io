@@ -43,6 +43,14 @@ table{
             }
         }
     }
+    .btn-download{
+        svg{
+            display: none;
+            @media screen and (min-width:$large){
+                display: inline;        
+            }
+        }
+    }
 }
 
 /** RESPONSIVE **/
