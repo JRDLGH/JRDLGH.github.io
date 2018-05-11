@@ -370,9 +370,12 @@ div.slide-details {
       width: 100%;
       img{
         margin: .5rem;
-        max-height: 150px;
+        // max-height: 150px;
+        max-width: 100%;
         @media screen and (min-width: $large) {
           max-height: 250px;
+          // width:auto;
+          
         }
       }
     }
